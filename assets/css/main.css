@@ -19,11 +19,11 @@
 
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
 :root { 
-  --background-color: #ffffff; /* Background color for the entire website, including individual sections */
-  --default-color: #272829; /* Default color used for the majority of the text content across the entire website */
-  --heading-color: #050d18; /* Color for headings, subheadings and title throughout the website */
-  --accent-color: #149ddd; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
-  --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
+  --background-color: #020617; /* Background color for the entire website, including individual sections */
+  --default-color: #cbd5f5; /* Default color used for the majority of the text content across the entire website */
+  --heading-color: #f8fafc; /* Color for headings, subheadings and title throughout the website */
+  --accent-color: #38bdf8; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
+  --surface-color: #020617; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
   --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
 }
 
@@ -579,11 +579,20 @@ section,
   margin: 0;
   font-size: 64px;
   font-weight: 700;
+  font-family: 'Space Grotesk', sans-serif;
+  letter-spacing: 1.5px;
+
+  background: linear-gradient(90deg, #00eaff, #7cffcb);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .hero p {
-  margin: 5px 0 0 0;
-  font-size: 26px;
+  font-size: 24px;
+  font-family: 'Rajdhani', sans-serif;
+  font-style: italic;
+  font-weight: 400;
+  letter-spacing: 1px;
 }
 
 .hero p span {
@@ -682,7 +691,8 @@ section,
 }
 
 /*--------------------------------------------------------------
-# Skills Section
+*--------------------------------------------------------------
+# Skills Section (Dark Mode Fix)
 --------------------------------------------------------------*/
 .skills .progress {
   height: 60px;
@@ -692,7 +702,7 @@ section,
 }
 
 .skills .progress .skill {
-  color: var(--heading-color);
+  color: #f8fafc;          /* skill name visible */
   padding: 0;
   margin: 0 0 6px 0;
   text-transform: uppercase;
@@ -704,10 +714,11 @@ section,
 .skills .progress .skill .val {
   float: right;
   font-style: normal;
+  color: #cbd5f5;          /* percentage visible */
 }
 
 .skills .progress-bar-wrap {
-  background: color-mix(in srgb, var(--default-color), transparent 90%);
+  background: #1e293b;     /* dark bar background */
   height: 10px;
 }
 
@@ -1272,4 +1283,25 @@ section,
 --------------------------------------------------------------*/
 .starter-section {
   /* Add your styles here */
+}
+/* ===== FORCE FIX FOR SKILLS TEXT (DARK MODE) ===== */
+
+#skills {
+  background-color: #020617 !important;
+}
+
+#skills .progress .skill {
+  color: #f8fafc !important;
+}
+
+#skills .progress .skill .val {
+  color: #cbd5f5 !important;
+}
+
+#skills .progress-bar-wrap {
+  background-color: #1e293b !important;
+}
+
+#skills .progress-bar {
+  background-color: #38bdf8 !important;
 }
